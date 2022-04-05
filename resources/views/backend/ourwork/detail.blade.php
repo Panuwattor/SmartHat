@@ -47,6 +47,7 @@
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">โน๊ต:</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="note">{{$ourwork->note}}</textarea>
+                                      
                                     </div>
                                 </div>
                             </div>

@@ -96,7 +96,7 @@
                 <a title="Instagram" href="https://www.instagram.com/tcon.homeservice/">
                   <span class="social-icon"><i class="fab fa-instagram"></i></span>
                 </a>
-                <a title="Linkdin" href="https://github.com/themefisher.com">
+                <a title="Linkdin" href="https://www.youtube.com/channel/UCBkZPW3fK0W7bCzZ3hHsrlg">
                   <span class="social-icon"><i class="fab fa-youtube"></i></span>
                 </a>
                 <a title="Instagram" href="https://www.tiktok.com/@tcon.build?">
@@ -130,7 +130,7 @@
                     <div class="info-box">
                       <div class="info-box-content">
                         <p class="info-box-title">สำนักงานใหญ่</p>
-                        <p class="info-box-subtitle"><a href="tel:045-691-999">045-691-999 ต่อ 4</a></p>
+                        <p class="info-box-subtitle"><a href="tel:045-691-999">045-691-999 ต่อ 4 <br />หรือ 063 905 4914</a></p>
                       </div>
                     </div>
                   </li>
@@ -139,8 +139,8 @@
                       <div class="info-box-content">
                         <p class="info-box-title">Facebook Page</p>
                         <p class="info-box-subtitle">
-                          <a title="Facebook" href="https://www.facebook.com/tconbuild" target="back">
-                            <span class="social-icon  text-primary"> Tcon Build ทีคอนบิวด์ รับสร้างบ้าน</span>
+                          <a title="Facebook" href="https://www.facebook.com/smarthatroof" target="back">
+                            <span class="social-icon  text-primary"> โครงหลังคาสำเร็จรูป ตรา Smart Hat</span>
                           </a>
                         </p>
                       </div>
@@ -150,7 +150,7 @@
                     <div class="info-box last">
                       <div class="info-box-content">
                         <p class="info-box-title">Line Official</p>
-                        <p class="info-box-subtitle text-success"><a href="line://ti/p/%40hjy7855d"> @baantaweechai </a></p>
+                        <p class="info-box-subtitle text-success"><a href="line://ti/p/%40hjy7855d"> @SmartHat </a></p>
                       </div>
                     </div>
                   </li>
@@ -163,7 +163,7 @@
                       </div>
                     </div>
                     @else
-                    <a class="btn btn-primary" data-toggle="modal" data-target="#loginModel"> <i class="fa fa-user"></i> เข้าสู่ระบบ</a>
+                    <a class="btn btn-warning" data-toggle="modal" data-target="#loginModel"> <i class="fa fa-user"></i> เข้าสู่ระบบ</a>
                     @endif
                     <!-- Modal -->
                     <div class="modal fade" id="loginModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -248,11 +248,9 @@
                 <div id="navbar-collapse" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item {{ (request()->is('/')) ? 'active' : '' }}"><a class="nav-link" href="/">หน้าหลัก</a></li>
-                    <li class="nav-item {{ (request()->is('housestyles')) ? 'active' : '' }}"><a class="nav-link" href="/housestyles">แบบบ้าน</a></li>
                     <li class="nav-item {{ (request()->is('ourworks')) ? 'active' : '' }}"><a class="nav-link" href="/ourworks">ผลงานของเรา</a></li>
                     <li class="nav-item {{ (request()->is('promotions')) ? 'active' : '' }}"><a class="nav-link" href="/promotions">ข่าวสาร & โปรโมชั่น</a></li>
                     <li class="nav-item {{ (request()->is('construction')) ? 'active' : '' }}"><a class="nav-link" href="/construction">ระบบก่อสร้าง</a></li>
-                    <li class="nav-item {{ (request()->is('preparing')) ? 'active' : '' }}"><a class="nav-link" href="/preparing">เตรียมตัวก่อนสร้างบ้าน</a></li>
                     <li class="nav-item {{ (request()->is('contact')) ? 'active' : '' }}"><a class="nav-link" href="/contact">ติดต่อเรา</a></li>
                     <li class="nav-item {{ (request()->is('join_us')) ? 'active' : '' }}"><a class="nav-link" href="/join_us">รวมงานกับเรา</a></li>
                   </ul>
@@ -288,14 +286,14 @@
           <div class="row justify-content-between">
             <div class="col-lg-4 col-md-6 footer-widget footer-about">
               <img loading="lazy" width="200px" class="footer-logo " src="/images/footer-logo.png" alt="Constra">
-              <p> เราคือบริษัทรับสร้างบ้าน รับออกแบบบ้าน และตกแต่งภายใน ในเขตภาคอีสาน
-                โดยทีมสถาปนิกและวิศวกรประสบการณ์สูง โดยมุ่งเน้นคุณภาพของงานเป็นหลัก
-                ด้วยการใส่ใจในทุกขั้นตอนการก่อสร้างและทีมงานมืออาชีพที่พร้อมทำให้งานเสร็จและส่งมอบได้ตรงตามเวลา
-                ลูกค้าได้บ้านที่สวย มีคุณภาพ งบประมาณไม่บานปลาย</p>
+              <p> โครงหลังคาสำเร็จรูป ตรา สมาร์ทแฮท" ภายใต้เครือ บริษัท ทีค่อนเฮ้าส์ จำกัด ผู้นำด้านระบบหลังคาครบวงจร สมาร์ทแฮท 
+                            ไม่ได้เพียงผลิต และจำหน่ายโครงหลังคาสำเร็จรูปที่มีคุณภาพ เรายังพร้อมที่จะให้คำปรึกษา 
+                            เพื่อร่วมกันสร้างรูปแบบหลังคาให้ตรงตามความต้องการของลูกค้า และอยู่ในงบประมาณที่ลูกค้าต้องการได้อย่างเหมาะสม
+                             เราใส่ใจในการบริการทุกขั้นตอน </p>
               <div class="footer-social">
                 <ul>
                   <li>
-                    <a title="Facebook" href="https://www.facebook.com/tconbuild" target="back">
+                    <a title="Facebook" href="https://www.facebook.com/smarthatroof" target="back">
                       <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
                     </a>
                   </li>
@@ -327,10 +325,12 @@
             <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
               <h3 class="widget-title">Working Hours</h3>
               <div class="working-hours">
-                เราทำงาน ทุกวัน รวมถึงวันหยุดนักขัตฤกษ์ <br>ที่ตั้ง สำนักงานใหญ่ 160 หมู่ที่ 1 ต.บัวหุ่ง อ.ราษีไศล จ.ศรีสะเกษ 33160 <br>ที่ตั้ง สาขาเมืองศรีสะเกษ 998/55-56 ถนนกวงเฮง ตำบลเมืองใต้ อำเภอเมือง จังหวัดศรีสะเกษ 33000
-                <br> เวลาการทำงาน : <span class="text-right">08:00 - 18:00 </span>
-                <br>สำนักงานใหญ่ โทร : <span class="text-right"><a href="tel:045-691-999">045-691-999 ต่อ 4</a></span>
-                <br>สาขาเมืองศรีสะเกษ โทร : <span class="text-right"><a href="tel:045-691-999">045-962-627</a></span>
+                เราทำงาน ทุกวัน รวมถึงวันหยุดนักขัตฤกษ์ 
+                ที่ตั้ง สำนักงานใหญ่ 160 หมู่ที่ 1 ต.บัวหุ่ง อ.ราษีไศล จ.ศรีสะเกษ 33160 
+                <br>ที่ตั้ง สาขาเมืองศรีสะเกษ 998/55-56 ถนนกวงเฮง ตำบลเมืองใต้ อำเภอเมือง จังหวัดศรีสะเกษ 33000
+                <!-- <span class="text-right"> <br>เวลาทำการ : 08:00 - 18:00 </span>
+                <span class="text-right"><a href="tel:045-691-999"><br>สำนักงานใหญ่โทร : 045-691-999 ต่อ 4</a></span>
+                <span class="text-right"><a href="tel:045-691-999"><br>สาขาเมืองศรีสะเกษโทร : 045-962-627</a></span> -->
               </div>
             </div><!-- Col end -->
 

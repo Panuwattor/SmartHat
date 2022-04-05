@@ -13,17 +13,33 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/admin/ourwork/quatation/test','OutworkController@test');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/ourwork/index', 'OutworkController@index');
     Route::get('/admin/ourwork/create', 'OutworkController@create');
     Route::post('/admin/ourwork/store', 'OutworkController@store');
+    Route::get('/admin/ourwork/Quatation','OutworkController@Quatations');
+
+    Route::post('/admin/Bannerandfont/store', 'bannerandfontController@store');
+    Route::get('/admin/bannerforn/create', 'bannerandfontController@create');
+    Route::get('/admin/Bannerandfont/bannershow','bannerandfontController@bannershow');
+    Route::get('/admin/Bannerandfont/fontshow','bannerandfontController@fontshow');
+    
+
+
+
+
     Route::get('/admin/ourwork/{ourwork}/detail', 'OutworkController@detail');
     Route::post('/admin/ourwork/{ourwork}/update', 'OutworkController@update');
     Route::post('/admin/ourwork/{ourwork}/delete', 'OutworkController@delete');
     Route::post('/admin/ourwork/{ourworkfile}/set/coverpage', 'OutworkController@set_coverpage');
     Route::post('/admin/ourwork/{ourworkfile}/file/delete', 'OutworkController@file_delete');
     Route::post('/admin/ourwork/{ourwork}/add/file', 'OutworkController@add_file');
+
+
+
+
 
     Route::get('/admin/housestyles', 'HousestyleController@admin_index');
     Route::get('/admin/housestyle/create', 'HousestyleController@admin_create');
@@ -66,7 +82,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/aboutme/updatePassword/{user}', 'UserController@updatePassword');
     Route::get('/builder/admin/users', 'UserController@lists');
     Route::post('/builder/admin/user/{user}', 'UserController@update');
-    Route::post('/user/register', 'UserController@store');
+    Route::get('/user/register', 'UserController@store');
 
     Route::get('/admin/index', 'AdminController@index')->name('home');;
 
@@ -129,7 +145,7 @@ Route::post('/joinuscl/accept/{joinus}', 'joinusController@accept');
 
 
 
-// Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-// Route::post('/register', 'Auth\RegisterController@register');
+ Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('/register', 'Auth\RegisterController@register');
 Route::post('/login', 'Auth\LoginController@login');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');

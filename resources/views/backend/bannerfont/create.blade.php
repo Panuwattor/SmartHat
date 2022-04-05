@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<form id="app" v-cloak action="/admin/ourwork/store" method="post" enctype="multipart/form-data" onsubmit="return confirm('ยืนยันเพิ่มผลงานของเรา ?')">
+<form id="app" v-cloak action="/admin/Bannerandfont/store" method="post" enctype="multipart/form-data" onsubmit="return confirm('ยืนยันเพิ่มผลงานของเรา ?')">
     @csrf
     <div class="row">
         <div class="col-md-3"></div>
@@ -27,13 +27,15 @@
                 <div class="card-body">
                    
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1"> หัวข้อ<code>*</code></label>
-                        <textarea class="form-control" name="note" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="exampleFormControlTextarea1">number<code>*</code></label>
+                        <textarea class="form-control" name="number" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
+                 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">เนื้อหา<code>*</code></label>
-                        <textarea class="form-control" name="detail" id="exampleFormControlTextarea2" rows="3"></textarea>
+                        <label for="exampleFormControlTextarea1">fontstyle<code>*</code></label>
+                        <textarea class="form-control" name="fontstyle" id="exampleFormControlTextarea2" rows="3"></textarea>
                     </div>
+                 
                 
                 </div>
             </div>
@@ -49,7 +51,7 @@
                         <thead>
                             <tr>
                                 <th>ลำดับ</th>
-                                <th>ภาพ</th>
+                                <th>Photo</th>
                                 <th>
                                     <span class="text-info" style="cursor: pointer;" @click="add()"><i class="fa fa-plus"></i> เพิ่มแถว</span>
                                 </th>
@@ -80,6 +82,7 @@
         <div class="col-md-3"></div>
     </div>
 </form>
+/////////////////////////////////////
 <br><br>
 @endsection
 

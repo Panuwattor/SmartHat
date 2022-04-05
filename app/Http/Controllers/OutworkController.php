@@ -23,6 +23,21 @@ class OutworkController extends Controller
         return view('backend.ourwork.create');
     }
 
+    public function Quatations()
+    {
+        return view('backend.ourwork.Quatation');
+    }
+
+    public function font()
+    {
+        return view('backend.ourwork.masterfontshow');
+    }
+
+   
+   
+
+
+
     public function store()
     {
         $our = Ourwork::where('note', request('note'))->first();

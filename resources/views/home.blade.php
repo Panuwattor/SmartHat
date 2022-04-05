@@ -79,11 +79,12 @@
         <div class="row text-center">
             <div class="col-12">
                 <h2 class="section-title">ผลงานของเรา</h2>
-                <h3 class="section-sub-title">โครงการ ล่าสุด</h3>
+                <h1><span style="color:#b96024">โครงการบ้านล่าสุด</span></h>
             </div>
         </div>
         <!--/ Title row end -->
-
+        
+        <!-- เป็นส่วนที่เเสดงเนื้อหาข่าว -->
         <div class="row">
             @foreach($ourworks as $i => $ourwork)
             <div class="col-lg-4 col-md-6 mb-4">
@@ -93,10 +94,12 @@
                             <img loading="lazy" class="img-fluid" src="{{ Storage::disk('spaces')->url($ourwork['file'])}}" alt="img">
                         </a>
                     </div>
+
+                    
                     <div class="post-body">
-                        <h4 class="post-title">
-                            <a href="/ourwork/{{ $ourwork['id'] }}/show" class="d-inline-block">{{$ourwork['note']}}</a>
-                        </h4>
+                        <h3 class="post-title">
+                        <a href="/ourwork/{{ $ourwork['id'] }}/show" class="d-inline-block">{{$ourwork['note']}}</a>
+                        </h3>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
                                 <i class="fa fa-clock-o"></i> {{$ourwork['date']}}
@@ -121,10 +124,13 @@
 <section class="subscribe no-padding">
     <div class="container">
         <div class="row">
+            
             <div class="col-md-4">
                 <div class="subscribe-call-to-acton">
+                    
                     <h3>Can We Help?</h3>
-                    <h4><a href="tel:045-691-999">045-691-999 ต่อ 4</a></h4>
+                    <h4 class="text-danger">045-691-999 ต่อ 4 </h4>
+                    <!-- <h4><a href="tel:045-691-999">045-691-999 ต่อ 4</a></h4> -->
                 </div>
             </div><!-- Col end -->
 
@@ -153,63 +159,7 @@
 </section>
 <!--/ subscribe end -->
 
-<section id="project-area" class="project-area solid-bg">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <h2 class="section-title">แบบบ้านของเรา</h2>
-                <h3 class="section-sub-title">แบบบ้านใหม่ล่าสุด</h3>
-            </div>
-        </div>
-        <!--/ Title row end -->
 
-        <div class="col-12">
-            <div class="shuffle-btn-group">
-                <label class="active" for="all">
-                    <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
-                </label>
-                @foreach($plan_tos as $i => $tag)
-                <label for="{{$tag->tag->name}}">
-                    <input type="radio" name="shuffle-filter" id="{{$tag->tag->name}}" value="{{$tag->tag->name}}">{{$tag->tag->name}}
-                </label>
-                @endforeach
-            </div><!-- project filter end -->
-            <div class="row shuffle-wrapper">
-                <!-- <div class="col-1 shuffle-sizer"></div> -->
-                @foreach($plans as $i => $plan)
-                <div class="col-lg-4 col-sm-6 shuffle-item" data-groups="[@foreach($plan->totag as $no => $totag) @if($no >= 1) , @endif &quot;{{$totag->tag->name}}&quot; @endforeach]">
-                    <div class="project-img-container">
-                        <a class="gallery-popup" src="{{ Storage::disk('spaces')->url($plan->img)}}" aria-label="project-img">
-                            <img class="img-fluid" src="{{ Storage::disk('spaces')->url($plan->img)}}" alt="project-img">
-                        </a>
-                        <div class="project-item-info">
-                            <div class="project-item-info-content">
-                                <h3 class="project-item-title">
-                                    <a href="/housestyle/{{$plan->id}}/show">{{$plan->codeOlan}} : {{$plan->floor}} ชั้น : {{$plan->bedroom}} ห้องนอน : {{$plan->toilet}} ห้องน้ำ</a>
-                                </h3>
-                                <a href="/housestyle/{{$plan->id}}/show">
-                                    <p class="project-cat">{{$plan->space}} ตร.ม.</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- shuffle item 1 end -->
-                @endforeach
-
-            </div><!-- shuffle end -->
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="general-btn text-center">
-                    <a class="btn btn-primary" href="/housestyles">ดู แบบ้านทั้งหมด</a>
-                </div>
-            </div>
-
-        </div><!-- Content row end -->
-    </div>
-    <!--/ Container end -->
-</section><!-- Project area end -->
 
 <section id="ts-service-area" class="ts-service-area pb-0">
     <div class="container">
@@ -393,7 +343,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h3 class="column-title">Tcon Build ทีคอนบิวด์</h3>
+                <h3 class="column-title">โครงหลังคาสำเร็จรูป ตรา Smart Hat</h3>
 
                 <div id="testimonial-slide" class="testimonial-slide">
                     <div class="item">
@@ -418,16 +368,16 @@
                     <div class="item">
                         <div class="quote-item">
                             <span class="quote-text">
-                                เราคือบริษัทรับสร้างบ้าน รับออกแบบบ้าน และตกแต่งภายใน ในเขตภาคอีสาน
-                                โดยทีมสถาปนิกและวิศวกรประสบการณ์สูง โดยมุ่งเน้นคุณภาพของงานเป็นหลัก
-                                ด้วยการใส่ใจในทุกขั้นตอนการก่อสร้างและทีมงานมืออาชีพที่พร้อมทำให้งานเสร็จและส่งมอบได้ตรงตามเวลา
-                                ลูกค้าได้บ้านที่สวย มีคุณภาพ งบประมาณไม่บานปลาย
+                            "โครงหลังคาสำเร็จรูป ตรา สมาร์ทแฮท" ภายใต้เครือ บริษัท ทีค่อนเฮ้าส์ จำกัด ผู้นำด้านระบบหลังคาครบวงจร สมาร์ทแฮท 
+                            ไม่ได้เพียงผลิต และจำหน่ายโครงหลังคาสำเร็จรูปที่มีคุณภาพ เรายังพร้อมที่จะให้คำปรึกษา 
+                            เพื่อร่วมกันสร้างรูปแบบหลังคาให้ตรงตามความต้องการของลูกค้า และอยู่ในงบประมาณที่ลูกค้าต้องการได้อย่างเหมาะสม
+                             เราใส่ใจในการบริการทุกขั้นตอน 
                             </span>
 
                             <div class="quote-item-footer">
-                                <img loading="lazy" class="testimonial-thumb" src="/images/clients/tconbuild.png" alt="testimonial">
+                                <img loading="lazy" class="testimonial-thumb" src="/images/clients/SmartHat.png" alt="testimonial">
                                 <div class="quote-item-info">
-                                    <h3 class="quote-author">TCON BUILD</h3>
+                                <h2>Smart<span style="color:#b96024"> Hat</span></h2>
                                     <span class="quote-subtext">ทีคอนบิวด์</span>
                                 </div>
                             </div>

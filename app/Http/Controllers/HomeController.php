@@ -29,19 +29,26 @@ class HomeController extends Controller
         $plan_tos = PlanToTag::with('tag')->groupBy('tag_id')->select('tag_id')->get();
         $plans = Housestyle::inRandomOrder()->paginate(6);
         $ourworke =   Ourwork::where('status', 1)->orderby('created_at', 'desc')->paginate(3);
+
+   
         $ourworks = [];
         foreach ($ourworke as $i => $our_) {
             $ourworks[$i]['id'] = $our_->id;
-            $ourworks[$i]['note'] = $our_->note;
-            $ourworks[$i]['date'] = $our_->date;
-            $ourworks[$i]['file'] =  $our_->files->where('type', 1)->first() ? $our_->files->where('type', 1)->first()->file : $our_->files->first()->file;
+            $ourworks[$i]['cont'] = $our_-> cont;
+            $ourworks[$i]['note'] = $our_-> note;
+            $ourworks[$i]['date'] = $our_-> date;
+            $ourworks[$i]['file'] =  $our_-> files->where('type', 1)->first() ? $our_->files->where('type', 1)->first()->file : $our_->files->first()->file;
         }
 
         $promotions = Promotion::where('status', 1)->orderBy('created_at', 'desc')->paginate(3);
 
         
         $promotion_tag = Tag::where('name', 'Promotion')->where('status', 1)->first();
-        $plan_promotion_count = PlanToTag::where('tag_id', $promotion_tag->id)->count();
+        $plan_promotion_count=0;
+        if ( $promotion_tag ){
+            $plan_promotion_count  = PlanToTag::where('tag_id', $promotion_tag->id)->count();
+        }
+      
 
         $plan_count = Housestyle::where('status', 1)->count();
         $web_counter = WebCounter::count();

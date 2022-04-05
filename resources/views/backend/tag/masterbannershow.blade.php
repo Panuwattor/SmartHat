@@ -34,10 +34,10 @@
                                 <table id="example1" class="table table-bordered table-striped table-sm">
                                     <thead>
                                         <tr class="text-center">
+                                            <th>ID</th>
                                             <th>NO.</th>
-                                            <th>Name</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                            <th>Photo</th>
+                                            <th>font style</th>
                                         </tr>
                                     </thead>
                                     <tbody>

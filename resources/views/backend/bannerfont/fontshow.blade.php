@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">ผลงานของเรา</h1>
+                <h1 class="m-0 text-dark">font show page web</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/admin/index">Home</a></li>
-                    <li class="breadcrumb-item active">ผลงานของเรา</li>
+                    <li class="breadcrumb-item active">Banner show page web</li>
                 </ol>
             </div>
         </div>
@@ -22,9 +22,9 @@
         <div class="col-md-12">
             <div class="card" style="border-radius: 0px;  ">
                 <div class="card-header">
-                    <h3 class="card-title">ผลงานของเรา</h3>
+                    <h3 class="card-title">font show page web</h3>
                     <div class="card-tools">
-                       <a href="/admin/ourwork/create" class="btn   btn-sm btn-outline-info ิ"><i class="fa fa-plus" aria-hidden="true"></i> เพิ่มผลงาน</a>
+                       <a href="#" class="btn   btn-sm btn-outline-info ิ"><i class="fa fa-plus" aria-hidden="true"></i> เพิ่มผลงาน</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -34,26 +34,14 @@
                                 <table id="example1" class="table table-bordered table-striped table-sm">
                                     <thead>
                                         <tr class="text-center">
-                                            <th>NO.</th>
-                                            <th>Note</th>
+                                            <th>ID</th>
+                                            <th>show-id</th>
+                                            <th>type(เเบบตัวอักษร เล็ก กลาง ใหญ่)</th>
+                                            <th>Font Style</th>
                                             <th>Status</th>
-                                            <th>Date</th>
-                                            <th>User</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        @foreach($ourworks as $i=> $ourwork)
-                                       <tr class="text-center">
-                                           <td>{{$i+1}}</td>
-                                           <td><a href="/admin/ourwork/{{$ourwork->id}}/detail"> {{$ourwork->cont}}</a> 
-                                           <a href="/admin/ourwork/{{$ourwork->id}}/detail"> {{$ourwork->note}}</a> </td>
-                                        
-                                           <td>{!!$ourwork->State!!}</td>
-                                           <td>{{$ourwork->date}}</td>
-                                           <td>{{$ourwork->user->name}}</td>
-                                       </tr>
-                                       @endforeach
-                                    </tbody>
+                                   
                                 </table>
                             </div>
                         </div>
