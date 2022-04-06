@@ -2,24 +2,43 @@
 
 @section('content')
 <div class="banner-carousel banner-carousel-1 mb-0">
-    <div class="banner-carousel-item" style="background-image:url(/images/slider-main/bg1.jpg)">
-        <div class="slider-content">
+    @foreach($slides as $slide)
+    <div class="banner-carousel-item" style="background-image:url({{ Storage::disk('spaces')->url($slide->photo) }})">
+        <div class="slider-content ">
             <div class="container h-100">
                 <div class="row align-items-center h-100">
-                    <div class="col-md-12 text-center">
-                        <h2 class="slide-title" data-animation-in="slideInLeft">17 Years of excellence in</h2>
-                        <h3 class="slide-sub-title" data-animation-in="slideInRight">Construction Industry</h3>
-                        <p data-animation-in="slideInLeft" data-duration-in="1.2">
-                            <a href="/housestyles" class="slider btn btn-primary">House Styles</a>
-                            <a href="tel:045-691-999" class="slider btn btn-primary border">Contact Now</a>
-                        </p>
+                    <div class="col-md-12 text-{{$slide->font_style}}">
+                        @foreach($slide->fonts as $font)
+
+                        @if($font->type == 'text_small')
+                        <p class="slider-description lead" data-animation-in="slideInRight">{{$font->note}}</p>
+                        @endif
+
+                        @if($font->type == 'text_normal')
+                        <h2 class="slide-title" data-animation-in="slideInLeft">{{$font->note}}</h2>
+                        @endif
+                       
+                        @if($font->type == 'text_large')
+                        <h3 class="slide-sub-title" data-animation-in="slideInRight">{{$font->note}}</h3>
+                        @endif
+                        
+                        @if($font->type == 'button')
+                        <a href="{{$font->link}}" class="slider btn btn-primary">{{$font->note}}</a>
+                        @endif
+                        
+                        @if($font->type == 'button_outline')
+                        <a href="{{$font->link}}" class="slider btn btn-primary border">{{$font->note}}</a>
+                        @endif
+
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
 
-    <div class="banner-carousel-item" style="background-image:url(/images/slider-main/bg2.jpg)">
+    <!-- <div class="banner-carousel-item" style="background-image:url(/images/slider-main/bg2.jpg)">
         <div class="slider-content text-left">
             <div class="container h-100">
                 <div class="row align-items-center h-100">
@@ -52,7 +71,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <section class="call-to-action-box no-padding">

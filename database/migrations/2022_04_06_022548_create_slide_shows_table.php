@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBannerFontsTable extends Migration
+class CreateSlideShowsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateBannerFontsTable extends Migration
      */
     public function up()
     {
-        Schema::create('banner_fonts', function (Blueprint $table) {
+        Schema::create('slide_shows', function (Blueprint $table) {
+
             $table->increments('id');
-            $table->integer('number')->default(1);  
-            $table->string('photo')->nullable();
-            $table->string('fontstyle')->nullable();
-            $table->string('status')->nullable();
+            $table->integer('number');
+            $table->text('photo');
+            $table->enum('font_style', ['left', 'center', 'right']);
+            $table->integer('status')->default(0);
             $table->timestamps();
+
         });
     }
 
@@ -30,6 +32,8 @@ class CreateBannerFontsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banner_fonts');
+
+        Schema::dropIfExists('slide_shows');
+        
     }
 }

@@ -33,23 +33,38 @@
                             <div class="table-responsive">
                                 <table id="example1" class="table table-bordered table-striped table-sm">
                                     <thead>
-                                        <tr class="text-center">
-                                            <th>ID</th>
-                                            <th>Number</th>
+
+                                        <tr class="text-center bg-gray">
+                                            <th>NO</th>
+                                            <th>Numer</th>
                                             <th>Photo</th>
                                             <th>FontStyle</th>
                                             <th>Status</th>
+                                            <th class="text-left">ข้อความ</th>
+                                            <th>Action</th>
+                                            <th>Edit</th>
                                         </tr>
+
                                     </thead>
                                     <tbody>
-                                        @foreach($banner as $i=> $ban)
+                                        
+                                        @foreach($slides as $i => $slide)
                                        <tr class="text-center">
-                                         
                                            <td>{{$i+1}}</td>
-                                           <td> {{$ban->number}}</td>
-                                           <td> {{$ban->photo}}</td>
-                                           <td> {{$ban->fontstyle}}</td>
-                                           <td> {{$ban->status}}</td>
+                                           <td>{{$slide->number}}</td>
+                                           <td>
+                                               <a href="{{ Storage::disk('spaces')->url($slide->photo) }}" target="_bank"><i class="fa fa-photo"></i></a>
+                                           </td>
+                                           <td>{{$slide->font_style}}</td>
+                                           <td>{{$slide->status}}</td>
+                                          
+                                           <td class="text-left">
+                                               @foreach($slide->fonts as $font)
+                                               <br><span>- {{$font->note}} ({{$font->type}})</span>
+                                               @endforeach
+                                           </td>
+                                           <td><a href="/add/slide/font/{{$slide->id}}">เพิ่มข้อความ</a></td>
+                                           <td><a href="/admin/Bannerandfont/edit/{{$slide->id}}" class="link-warning">เเก้ไข</a></td>
                                        </tr>
                                        @endforeach
                                     </tbody>

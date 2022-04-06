@@ -144,15 +144,6 @@
                                     </a>
                                 </li>
                             </ul>
-                            <ul class="nav nav-treeview" style="display: {{ (request()->is('admin/Bannerandfont/fontshow')) ? 'block' : '' }}">
-                                <li class="nav-item">
-                                    <a href="/admin/Bannerandfont/fontshow" class="nav-link {{ (request()->is('admin/Bannerandfont/fontshow')) ? 'active' : '' }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>banner font show</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
 
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link {{ (request()->is('admin/ourwork/Quatation')) ? 'active' : '' }}">

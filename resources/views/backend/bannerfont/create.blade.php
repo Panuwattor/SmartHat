@@ -25,64 +25,29 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                   
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">number<code>*</code></label>
-                        <textarea class="form-control" name="number" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <input type="number" class="form-control" name="number" required>
                     </div>
-                 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">fontstyle<code>*</code></label>
-                        <textarea class="form-control" name="fontstyle" id="exampleFormControlTextarea2" rows="3"></textarea>
+                        <label for="exampleFormControlTextarea1">รูปภาพ<code>*</code></label>
+                        <input type="file" name="photo" required>
                     </div>
-                 
-                
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap text-center">
-                        <thead>
-                            <tr>
-                                <th>ลำดับ</th>
-                                <th>Photo</th>
-                                <th>
-                                    <span class="text-info" style="cursor: pointer;" @click="add()"><i class="fa fa-plus"></i> เพิ่มแถว</span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="(item, index) in arr">
-                                <td>@{{index + 1}}</td>
-                                <td>
-                                    <input required type="file" name="files[]" class="form-control form-control-sm" autocomplete="0ff" placeholder="รายการ">
-                                </td>
-                                <td>
-                                    <span @click="remove(index)" style="cursor: pointer;" v-if="arr.length > 1" class="text-danger"><i class="fa fa-trash-o"></i> ลบ</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="card-footer">
-                    <div class="row ">
-                        <div class="col-md-12 text-right">
-                            <button type="submit" class="btn btn-success"><i class="fas fa-save"> บันทึก</i> </button>
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">font style<code>*</code></label>
+                        <select name="font_style" class="form-control" required>
+                            <option value="left">left</option>
+                            <option value="center">center</option>
+                            <option value="right">right</option>
+                        </select>
                     </div>
+                    <button class="btn btn-success pull-right" type="submit">บันทึก</button>
                 </div>
             </div>
         </div>
         <div class="col-md-3"></div>
     </div>
 </form>
-/////////////////////////////////////
 <br><br>
 @endsection
 

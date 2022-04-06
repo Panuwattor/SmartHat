@@ -21,13 +21,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/ourwork/store', 'OutworkController@store');
     Route::get('/admin/ourwork/Quatation','OutworkController@Quatations');
 
-    Route::post('/admin/Bannerandfont/store', 'bannerandfontController@store');
-    Route::get('/admin/bannerforn/create', 'bannerandfontController@create');
-    Route::get('/admin/Bannerandfont/bannershow','bannerandfontController@bannershow');
-    Route::get('/admin/Bannerandfont/fontshow','bannerandfontController@fontshow');
-    
-
-
+    Route::post('/add/slide/font/{slide}', 'BannershowController@storeFont');
+    Route::post('/admin/Bannerandfont/store', 'BannershowController@store');
+    Route::get('/add/slide/font/{slide}', 'BannershowController@addFont');
+    Route::get('/admin/bannerforn/create', 'BannershowController@create');
+    Route::get('/admin/Bannerandfont/bannershow','BannershowController@bannershow');
+    Route::get('/admin/Bannerandfont/fontshow','BannershowController@fontshow');
+    Route::get('/admin/Bannerandfont/edit/{slide}','BannershowController@edit');
+    Route::post('/admin/Bannerandfont/edit/{slide}','BannershowController@update');
 
 
     Route::get('/admin/ourwork/{ourwork}/detail', 'OutworkController@detail');
@@ -36,9 +37,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/ourwork/{ourworkfile}/set/coverpage', 'OutworkController@set_coverpage');
     Route::post('/admin/ourwork/{ourworkfile}/file/delete', 'OutworkController@file_delete');
     Route::post('/admin/ourwork/{ourwork}/add/file', 'OutworkController@add_file');
-
-
-
 
 
     Route::get('/admin/housestyles', 'HousestyleController@admin_index');

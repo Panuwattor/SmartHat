@@ -7,6 +7,7 @@ use App\JoinUs;
 use App\Ourwork;
 use App\PlanToTag;
 use App\Promotion;
+use App\SlideShow;
 use App\Tag;
 use App\WebCounter;
 use Illuminate\Http\Request;
@@ -26,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $slides = SlideShow::all();
         $plan_tos = PlanToTag::with('tag')->groupBy('tag_id')->select('tag_id')->get();
         $plans = Housestyle::inRandomOrder()->paginate(6);
         $ourworke =   Ourwork::where('status', 1)->orderby('created_at', 'desc')->paginate(3);
@@ -53,7 +55,7 @@ class HomeController extends Controller
         $plan_count = Housestyle::where('status', 1)->count();
         $web_counter = WebCounter::count();
 
-        return view('home', compact('ourworks', 'promotions', 'plans','plan_tos', 'plan_count', 'plan_promotion_count', 'web_counter'));
+        return view('home', compact('slides', 'ourworks', 'promotions', 'plans','plan_tos', 'plan_count', 'plan_promotion_count', 'web_counter'));
     }
 
     public function construction()
