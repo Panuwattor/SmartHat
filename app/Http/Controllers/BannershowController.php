@@ -32,25 +32,26 @@ class BannershowController extends Controller
 
     public function edit(SlideShow $slide)
     {
-
         return view('backend.bannerfont.edit', compact('slide'));
     }
 
     public function update(SlideShow $slide)
     {
-
+       
 
         if (!request('photo')) {
             alert()->warning('', 'โปรดเลือกรูปที่จะแสดง');
             return back();
         }
-    
-
         $path = Storage::disk('spaces')->putFile('tconBuild/ourwork', request('photo'), 'public');
+
         $slide->update([
 
-            'number'=>request('number'), 'photo'=>$path, 'font_style'=>request('font_style')
-            
+            'number' => request('number'),
+            'photo' => $path,
+            'font_style' => request('font_style'),
+            'note' => request('note')
+
         ]);
         return redirect('admin/Bannerandfont/bannershow');
     }

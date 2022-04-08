@@ -30,6 +30,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/Bannerandfont/edit/{slide}','BannershowController@edit');
     Route::post('/admin/Bannerandfont/edit/{slide}','BannershowController@update');
 
+    Route::get('/admin/Bannerandfont/edit/{slide}','BannershowController@edit');
+    Route::post('/admin/Bannerandfont/edit/{slide}','BannershowController@update');
+    
+
 
     Route::get('/admin/ourwork/{ourwork}/detail', 'OutworkController@detail');
     Route::post('/admin/ourwork/{ourwork}/update', 'OutworkController@update');

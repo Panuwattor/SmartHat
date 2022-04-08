@@ -25,14 +25,21 @@
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Number for edit<code>*</code></label>
                             <input type="number" class="form-control" name="number" required value="{{$slide->number}}">
-                        </div> 
+                        </div>
                         <div class="form-group">
                             <th>
                                 <label for="exampleFormControlTextarea1"><code>รูปภาพที่ต้องการเปลี่ยน</code></label>
-                                <input type="file" name="photo" required>
+                                <input type="file" name="photo">
+                            </th>
+                        </div><br>
+
+                        <div class="form-group">
+                            <th>
+                                <label for="exampleFormControlTextarea1"><code>เเก้ไขข้อความ</code></label>
+                                <input type="text" class="form-control" name="note" required value="{{$slide->note}}">
                             </th>
                         </div>
-                      
+
 
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">font style for edit<code>*</code></label>
@@ -49,10 +56,38 @@
                         <button class="btn btn-success pull-right" type="submit">บันทึก</button>
 
                     </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>type</th>
+                                    <th>note</th>
+                                    <th>link</th>
+                                    <th>แก้ไข</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($slide->fonts as $font)
+
+                                <tr>
+                                    <td>{{$font->id}}</td>
+                                    <td>{{$font->type}}</td>
+                                    <td>{{$font->note}}</td>
+                                    <td>{{$font->link}}</td>
+                                    <td>ลิ้งค์</td>
+                                </tr>
+                            </tbody>
+
+                            @endforeach
+
+
+                    </div>
                 </div>
             </div>
             <div class="col-md-3"></div>
         </div>
+
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

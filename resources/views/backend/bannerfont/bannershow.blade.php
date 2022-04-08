@@ -63,6 +63,7 @@
                                                <br><span>- {{$font->note}} ({{$font->type}})</span>
                                                @endforeach
                                            </td>
+                                        
                                            <td><a href="/add/slide/font/{{$slide->id}}">เพิ่มข้อความ</a></td>
                                            <td><a href="/admin/Bannerandfont/edit/{{$slide->id}}" class="link-warning">เเก้ไข</a></td>
                                        </tr>
