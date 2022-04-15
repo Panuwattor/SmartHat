@@ -30,7 +30,9 @@ class OutworkController extends Controller
 
     public function font()
     {
+
         return view('backend.ourwork.masterfontshow');
+        
     }
 
    

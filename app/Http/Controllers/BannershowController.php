@@ -35,10 +35,28 @@ class BannershowController extends Controller
         return view('backend.bannerfont.edit', compact('slide'));
     }
 
+    public function edittext(SlideShowfont $slidefont)
+    {
+
+
+        return view('backend.bannerfont.edittext', compact('slidefont'));
+    }
+
+    public function edittextup(SlideShowfont $slidefont)
+    {
+
+        $slidefont->update([
+
+            'type' => request('type'),
+            'note' => request('note'),
+            'link' => request('link')
+
+        ]);
+        return back();
+    }
+
     public function update(SlideShow $slide)
     {
-       
-
         if (!request('photo')) {
             alert()->warning('', 'โปรดเลือกรูปที่จะแสดง');
             return back();
@@ -56,6 +74,21 @@ class BannershowController extends Controller
         return redirect('admin/Bannerandfont/bannershow');
     }
 
+    public function delete(SlideShow $slide)
+    {
+
+        $slidefonts = SlideShowfont::where('slide_show_id', $slide->id)->get();
+        foreach ($slidefonts as $slidefont) {
+
+            $slidefont->delete();
+            
+           
+        }
+        $slide->delete();
+        
+        return back();
+    }
+
     public function store()
     {
         $slide = SlideShow::where('number', request('number'))->first();
@@ -70,6 +103,7 @@ class BannershowController extends Controller
         }
 
         DB::beginTransaction();
+
 
         $path = Storage::disk('spaces')->putFile('tconBuild/ourwork', request('photo'), 'public');
         $slide = SlideShow::create([

@@ -18,7 +18,7 @@ class CreateSlideShowsTable extends Migration
             $table->increments('id');
             $table->integer('number');
             $table->text('photo');
-            $table->enum('font_style', ['left', 'center', 'right']);
+            $table->enum('font_style', ['left', 'center', 'right'])->nullable();
             $table->integer('status')->default(0);
             $table->timestamps();
 

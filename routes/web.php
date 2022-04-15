@@ -27,12 +27,19 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/bannerforn/create', 'BannershowController@create');
     Route::get('/admin/Bannerandfont/bannershow','BannershowController@bannershow');
     Route::get('/admin/Bannerandfont/fontshow','BannershowController@fontshow');
-    Route::get('/admin/Bannerandfont/edit/{slide}','BannershowController@edit');
-    Route::post('/admin/Bannerandfont/edit/{slide}','BannershowController@update');
+
+
+    Route::get('/admin/Bannerandfont/edittext/{slidefont}','BannershowController@edittext');
+    Route::get('/admin/Bannerandfont/updatetext/{slidefont}','BannershowController@edittext');
+    Route::post('/admin/Bannerandfont/updatetextup/{slidefont}','BannershowController@edittextup');
+
+ 
 
     Route::get('/admin/Bannerandfont/edit/{slide}','BannershowController@edit');
     Route::post('/admin/Bannerandfont/edit/{slide}','BannershowController@update');
+    Route::post('/admin/Bannerandfont/delete/{slide}','BannershowController@delete');
     
+
 
 
     Route::get('/admin/ourwork/{ourwork}/detail', 'OutworkController@detail');
@@ -111,6 +118,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
     Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 });
+
 
 Route::group(['middleware' => 'web_counter'], function () {
     Route::get('/', 'HomeController@index');

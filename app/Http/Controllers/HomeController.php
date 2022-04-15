@@ -50,10 +50,10 @@ class HomeController extends Controller
         if ( $promotion_tag ){
             $plan_promotion_count  = PlanToTag::where('tag_id', $promotion_tag->id)->count();
         }
-      
 
         $plan_count = Housestyle::where('status', 1)->count();
         $web_counter = WebCounter::count();
+
 
         return view('home', compact('slides', 'ourworks', 'promotions', 'plans','plan_tos', 'plan_count', 'plan_promotion_count', 'web_counter'));
     }

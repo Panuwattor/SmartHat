@@ -24,7 +24,7 @@
                 <div class="card-header">
                     <h3 class="card-title">Banner show page web</h3>
                     <div class="card-tools">
-                       <a href="/admin/bannerforn/create" class="btn   btn-sm btn-outline-info ิ"><i class="fa fa-plus" aria-hidden="true"></i> เพิ่มผลงาน</a>
+                        <a href="/admin/bannerforn/create" class="btn   btn-sm btn-outline-info ิ"><i class="fa fa-plus" aria-hidden="true"></i> เพิ่มผลงาน</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -43,31 +43,39 @@
                                             <th class="text-left">ข้อความ</th>
                                             <th>Action</th>
                                             <th>Edit</th>
+                                            <th>delete</th>
                                         </tr>
 
                                     </thead>
                                     <tbody>
-                                        
+
                                         @foreach($slides as $i => $slide)
-                                       <tr class="text-center">
-                                           <td>{{$i+1}}</td>
-                                           <td>{{$slide->number}}</td>
-                                           <td>
-                                               <a href="{{ Storage::disk('spaces')->url($slide->photo) }}" target="_bank"><i class="fa fa-photo"></i></a>
-                                           </td>
-                                           <td>{{$slide->font_style}}</td>
-                                           <td>{{$slide->status}}</td>
-                                          
-                                           <td class="text-left">
-                                               @foreach($slide->fonts as $font)
-                                               <br><span>- {{$font->note}} ({{$font->type}})</span>
-                                               @endforeach
-                                           </td>
-                                        
-                                           <td><a href="/add/slide/font/{{$slide->id}}">เพิ่มข้อความ</a></td>
-                                           <td><a href="/admin/Bannerandfont/edit/{{$slide->id}}" class="link-warning">เเก้ไข</a></td>
-                                       </tr>
-                                       @endforeach
+                                        <tr class="text-center">
+                                            <td>{{$i+1}}</td>
+                                            <td>{{$slide->number}}</td>
+                                            <td>
+                                                <a href="{{ Storage::disk('spaces')->url($slide->photo) }}" target="_bank"><i class="fa fa-photo"></i></a>
+                                            </td>
+                                            <td>{{$slide->font_style}}</td>
+                                            <td>{{$slide->status}}</td>
+
+                                            <td class="text-left">
+                                                @foreach($slide->fonts as $font)
+                                                <br><span>- {{$font->note}} ({{$font->type}})</span>
+                                                @endforeach
+                                            </td>
+
+
+                                            <td><a href="/add/slide/font/{{$slide->id}}">เพิ่มข้อความ</a></td>
+                                            <td><a href="/admin/Bannerandfont/edit/{{$slide->id}}" class="link-warning">เเก้ไข</a></td>
+                                           
+                                            <td>
+                                            <form action="/admin/Bannerandfont/delete/{{$slide->id}}" id="delete" method="post" onsubmit="return confirm('ลบหรือไม่?')">
+                                                @csrf
+                                            <button type="submit" class="btn-sm btn-danger">ลบ</button>
+                                            </td>
+                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
