@@ -62,47 +62,90 @@
                                     <button class="btn btn-success pull-right" type="submit">บันทึก</button>
 
                                 </div>
+                            </div>
+                            <div class="card-body">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>type</th>storeFont
+                                            <th>note</th>
+                                            <th>link</th>
+                                            <th>แก้ไข</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($slide->fonts as $font)
 
-                                @endsection
-                                @section('header')
+                                        <tr>
+                                            <td>{{$font->id}}</td>
+                                            <td>{{$font->type}}</td>
+                                            <td>{{$font->note}}</td>
+                                            <td>{{$font->link}}</td>
 
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
+                                            <td><a href="/admin/Bannerandfont/updatetext/{{$font->id}} " class="link-warning">เเก้ไข</a></td>
+                                           
 
-                                <link rel="stylesheet" href="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-                                <link rel="stylesheet" href="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-                                @endsection
+                                        </tr>
+                                    </tbody>
 
-                                @section('footer')
+                                    @endforeach
 
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script>
 
-                                <script>
-                                    $('#from').datepicker({
-                                        autoclose: true,
-                                        format: "yyyy-mm-dd",
-                                    })
-                                    $('#to').datepicker({
-                                        autoclose: true,
-                                        format: "yyyy-mm-dd",
-                                    })
-                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
 
-                                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables/jquery.dataTables.min.js"></script>
-                                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-                                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-                                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-                                <script>
-                                    $(function() {
-                                        $('#example1').DataTable({
-                                            "paging": false,
-                                            "lengthChange": false,
-                                            "searching": false,
-                                            "ordering": false,
-                                            "info": false,
-                                            "autoWidth": false,
-                                            "responsive": true,
-                                        });
-                                    });
-                                </script>
-                                @endsection
+
+                </form>
+
+                @endsection
+                @section('header')
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
+
+                <link rel="stylesheet" href="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+                <link rel="stylesheet" href="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+                @endsection
+
+                @section('footer')
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha256-bqVeqGdJ7h/lYPq6xrPv/YGzMEb6dNxlfiTUHSgRCp8=" crossorigin="anonymous"></script>
+
+                <script>
+                    $('#from').datepicker({
+                        autoclose: true,
+                        format: "yyyy-mm-dd",
+                    })
+                    $('#to').datepicker({
+                        autoclose: true,
+                        format: "yyyy-mm-dd",
+                    })
+                </script>
+
+                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+                <script src="https://taweechai-bucket.s3-ap-southeast-1.amazonaws.com/upvc/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+                <script>
+                    $(function() {
+                        $('#example1').DataTable({
+                            "paging": false,
+                            "lengthChange": false,
+                            "searching": false,
+                            "ordering": false,
+                            "info": false,
+                            "autoWidth": false,
+                            "responsive": true,
+                        });
+                    });
+                </script>
+                @endsection
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>

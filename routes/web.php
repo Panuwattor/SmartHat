@@ -28,10 +28,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/Bannerandfont/bannershow','BannershowController@bannershow');
     Route::get('/admin/Bannerandfont/fontshow','BannershowController@fontshow');
 
+    Route::get('/admin/Bannerandfont/edittest','BannershowController@edittest');
 
-    Route::get('/admin/Bannerandfont/edittext/{slidefont}','BannershowController@edittext');
+    Route::get('/admin/Bannerandfont/edittext/{font}','BannershowController@edittext');
     Route::get('/admin/Bannerandfont/updatetext/{slidefont}','BannershowController@edittext');
     Route::post('/admin/Bannerandfont/updatetextup/{slidefont}','BannershowController@edittextup');
+
 
  
 

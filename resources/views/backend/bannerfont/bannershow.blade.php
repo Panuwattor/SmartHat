@@ -70,10 +70,12 @@
                                             <td><a href="/admin/Bannerandfont/edit/{{$slide->id}}" class="link-warning">เเก้ไข</a></td>
                                            
                                             <td>
-                                            <form action="/admin/Bannerandfont/delete/{{$slide->id}}" id="delete" method="post" onsubmit="return confirm('ลบหรือไม่?')">
+                                            <form action="/admin/Bannerandfont/delete/{{$slide->id}}" id="{{$i}}" method="post" onsubmit="return confirm('ลบหรือไม่?')">
                                                 @csrf
                                             <button type="submit" class="btn-sm btn-danger">ลบ</button>
+                                            </form>
                                             </td>
+
                                         </tr>
                                         @endforeach
                                     </tbody>

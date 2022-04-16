@@ -35,6 +35,12 @@ class BannershowController extends Controller
         return view('backend.bannerfont.edit', compact('slide'));
     }
 
+    public function edittest()
+    {
+        
+        return view('backend.bannerfont.edittext');
+    }
+
     public function edittext(SlideShowfont $slidefont)
     {
 
@@ -42,7 +48,7 @@ class BannershowController extends Controller
         return view('backend.bannerfont.edittext', compact('slidefont'));
     }
 
-    public function edittextup(SlideShowfont $slidefont)
+    public function edittextup(SlideShowfont $font)
     {
 
         $slidefont->update([
@@ -80,7 +86,7 @@ class BannershowController extends Controller
         $slidefonts = SlideShowfont::where('slide_show_id', $slide->id)->get();
         foreach ($slidefonts as $slidefont) {
 
-            $slidefont->delete();
+            $slidefont->delete($i);
             
            
         }
