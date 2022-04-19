@@ -12,6 +12,7 @@ class BannershowController extends Controller
 {
     public function index()
     {
+        dd(request()->all());
         return view('backend.bannerfont.bannershow');
     }
     public function bannershow()

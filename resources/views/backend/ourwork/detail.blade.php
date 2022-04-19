@@ -81,7 +81,7 @@
                             </div>
                             <div>
                                 <label for="">ผู้สร้าง</label>
-                                <span>{{$ourwork->user->name}} </span>
+                                <span>{{$ourwork->name}} </span>
                             </div>
                             <div>
                                 <label for="">สถานะ</label>

@@ -50,7 +50,7 @@
                                         
                                            <td>{!!$ourwork->State!!}</td>
                                            <td>{{$ourwork->date}}</td>
-                                           <td>{{$ourwork->user->name}}</td>
+                                           <td>{{$ourwork->name}}</td>
                                        </tr>
                                        @endforeach
                                     </tbody>

@@ -34,16 +34,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/Bannerandfont/updatetext/{slidefont}','BannershowController@edittext');
     Route::post('/admin/Bannerandfont/updatetextup/{font}','BannershowController@edittextup');
 
-
- 
-
     Route::get('/admin/Bannerandfont/edit/{slide}','BannershowController@edit');
     Route::post('/admin/Bannerandfont/edit/{slide}','BannershowController@update');
     Route::post('/admin/Bannerandfont/delete/{slide}','BannershowController@delete');
     
-
-
-
     Route::get('/admin/ourwork/{ourwork}/detail', 'OutworkController@detail');
     Route::post('/admin/ourwork/{ourwork}/update', 'OutworkController@update');
     Route::post('/admin/ourwork/{ourwork}/delete', 'OutworkController@delete');
