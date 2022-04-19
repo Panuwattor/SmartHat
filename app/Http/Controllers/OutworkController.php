@@ -42,6 +42,7 @@ class OutworkController extends Controller
 
     public function store()
     {
+     
         $our = Ourwork::where('note', request('note'))->first();
 
         if ($our) {
@@ -54,6 +55,8 @@ class OutworkController extends Controller
             'status' => 1,
             'date' => Carbon::today(),
             'note' => request('note'),
+            'detail' => request('detail'),
+            'Description' => request('Description'),
             'user_id' => auth()->user()->id,
         ]);
 
@@ -66,6 +69,7 @@ class OutworkController extends Controller
             ]);
         }
         DB::commit();
+
         return redirect('/admin/ourwork/index');
     }
 

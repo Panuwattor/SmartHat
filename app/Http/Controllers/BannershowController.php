@@ -28,6 +28,7 @@ class BannershowController extends Controller
 
     public function create()
     {
+        
         return view('backend.bannerfont.create');
     }
 
@@ -131,10 +132,12 @@ class BannershowController extends Controller
     public function storeFont(SlideShow $slide)
     {
         SlideShowfont::create([
+
             'slide_show_id' => $slide->id,
             'type' => request('type'),
             'link' => request('link'),
             'note' => request('note'),
+
         ]);
 
         return redirect('/admin/Bannerandfont/bannershow');

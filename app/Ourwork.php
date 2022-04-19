@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ourwork extends Model
 {
-    protected $fillable=['status','date','note','user_id'];
+ 
+    protected $fillable=['status','date','note','detail','Description','user_id'];
     
     public function files()
     {
@@ -25,5 +26,6 @@ class Ourwork extends Model
             return '<small class="badge badge-success">ใช้งาน</small>';
         } 
     }
+
 
 }

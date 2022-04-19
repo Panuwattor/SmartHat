@@ -18,6 +18,8 @@ class CreateOurworksTable extends Migration
             $table->boolean('status');
             $table->date('date');
             $table->text('note');
+            $table->text('detail');
+            $table->text('Description');
             $table->integer('user_id');
             $table->timestamps();
         });

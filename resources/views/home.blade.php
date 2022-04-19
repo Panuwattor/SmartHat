@@ -17,15 +17,15 @@
                         @if($font->type == 'text_normal')
                         <h2 class="slide-title" data-animation-in="slideInLeft">{{$font->note}}</h2>
                         @endif
-                       
+
                         @if($font->type == 'text_large')
                         <h3 class="slide-sub-title" data-animation-in="slideInRight">{{$font->note}}</h3>
                         @endif
-                        
+
                         @if($font->type == 'button')
                         <a href="{{$font->link}}" class="slider btn btn-primary">{{$font->note}}</a>
                         @endif
-                        
+
                         @if($font->type == 'button_outline')
                         <a href="{{$font->link}}" class="slider btn btn-primary border">{{$font->note}}</a>
                         @endif
@@ -102,7 +102,7 @@
             </div>
         </div>
         <!--/ Title row end -->
-        
+
         <!-- เป็นส่วนที่เเสดงเนื้อหาข่าว -->
         <div class="row">
             @foreach($ourworks as $i => $ourwork)
@@ -114,10 +114,10 @@
                         </a>
                     </div>
 
-                    
+
                     <div class="post-body">
                         <h3 class="post-title">
-                        <a href="/ourwork/{{ $ourwork['id'] }}/show" class="d-inline-block">{{$ourwork['note']}}</a>
+                            <a href="/ourwork/{{ $ourwork['id'] }}/show" class="d-inline-block">{{$ourwork['note']}}</a>
                         </h3>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
@@ -143,10 +143,10 @@
 <section class="subscribe no-padding">
     <div class="container">
         <div class="row">
-            
+
             <div class="col-md-4">
                 <div class="subscribe-call-to-acton">
-                    
+
                     <h3>Can We Help?</h3>
                     <h4 class="text-danger">045-691-999 ต่อ 4 </h4>
                     <!-- <h4><a href="tel:045-691-999">045-691-999 ต่อ 4</a></h4> -->
@@ -195,7 +195,7 @@
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
                         <img loading="lazy" src="/images/icon-image/service-icon6.png" alt="service-icon">
-                        
+
                     </div>
                     <div class="ts-service-box-info">
                         <h3 class="service-box-title">ONE STOP SERVICE “มาที่เดียวจบ ครบในเรื่องบ้าน”</h3>
@@ -206,7 +206,7 @@
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
                         <img loading="lazy" src="/images/icon-image/service-icon3.png" alt="service-icon">
-                       
+
                     </div>
                     <div class="ts-service-box-info">
                         <h3 class="service-box-title">การออกแบบบ้าน</h3>
@@ -216,7 +216,7 @@
 
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
-                        
+
                         <img loading="lazy" src="/images/icon-image/service-icon1.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
@@ -387,16 +387,16 @@
                     <div class="item">
                         <div class="quote-item">
                             <span class="quote-text">
-                            "โครงหลังคาสำเร็จรูป ตรา สมาร์ทแฮท" ภายใต้เครือ บริษัท ทีค่อนเฮ้าส์ จำกัด ผู้นำด้านระบบหลังคาครบวงจร สมาร์ทแฮท 
-                            ไม่ได้เพียงผลิต และจำหน่ายโครงหลังคาสำเร็จรูปที่มีคุณภาพ เรายังพร้อมที่จะให้คำปรึกษา 
-                            เพื่อร่วมกันสร้างรูปแบบหลังคาให้ตรงตามความต้องการของลูกค้า และอยู่ในงบประมาณที่ลูกค้าต้องการได้อย่างเหมาะสม
-                             เราใส่ใจในการบริการทุกขั้นตอน 
+                                "โครงหลังคาสำเร็จรูป ตรา สมาร์ทแฮท" ภายใต้เครือ บริษัท ทีค่อนเฮ้าส์ จำกัด ผู้นำด้านระบบหลังคาครบวงจร สมาร์ทแฮท
+                                ไม่ได้เพียงผลิต และจำหน่ายโครงหลังคาสำเร็จรูปที่มีคุณภาพ เรายังพร้อมที่จะให้คำปรึกษา
+                                เพื่อร่วมกันสร้างรูปแบบหลังคาให้ตรงตามความต้องการของลูกค้า และอยู่ในงบประมาณที่ลูกค้าต้องการได้อย่างเหมาะสม
+                                เราใส่ใจในการบริการทุกขั้นตอน
                             </span>
 
                             <div class="quote-item-footer">
                                 <img loading="lazy" class="testimonial-thumb" src="/images/clients/SmartHat.png" alt="testimonial">
                                 <div class="quote-item-info">
-                                <h2>Smart<span style="color:#b96024"> Hat</span></h2>
+                                    <h2>Smart<span style="color:#b96024"> Hat</span></h2>
                                     <span class="quote-subtext">ทีคอนบิวด์</span>
                                 </div>
                             </div>
