@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/admin/Bannerandfont/edittext/{font}','BannershowController@edittext');
     Route::get('/admin/Bannerandfont/updatetext/{slidefont}','BannershowController@edittext');
-    Route::post('/admin/Bannerandfont/updatetextup/{slidefont}','BannershowController@edittextup');
+    Route::post('/admin/Bannerandfont/updatetextup/{font}','BannershowController@edittextup');
 
 
  

@@ -50,8 +50,8 @@ class BannershowController extends Controller
 
     public function edittextup(SlideShowfont $font)
     {
-
-        $slidefont->update([
+       
+        $font->update([
 
             'type' => request('type'),
             'note' => request('note'),
@@ -86,7 +86,7 @@ class BannershowController extends Controller
         $slidefonts = SlideShowfont::where('slide_show_id', $slide->id)->get();
         foreach ($slidefonts as $slidefont) {
 
-            $slidefont->delete($i);
+            $slidefont->delete();
             
            
         }
