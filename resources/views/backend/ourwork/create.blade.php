@@ -32,12 +32,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">เนื้อหา<code>*</code></label>
+                        <label for="exampleFormControlTextarea1">เนื้อหา(กรุณาใส่ 3 บรรทัด)<code>*</code></label>
                         <textarea class="form-control" name="detail" id="exampleFormControlTextarea2" rows="3"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Description<code>*</code></label>
-                        <textarea class="form-control" name="Description" id="exampleFormControlTextarea2" rows="3"></textarea>
+                        <textarea class="form-control" name="Description" id="exampleFormControlTextarea3" rows="3"></textarea>
                     </div>
 
                 </div>

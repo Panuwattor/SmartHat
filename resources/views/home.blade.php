@@ -116,9 +116,9 @@
 
 
                     <div class="post-body">
-                        <h3 class="post-title">
-                            <a href="/ourwork/{{ $ourwork['id'] }}/show" class="d-inline-block">{{$ourwork['note']}}</a>
-                        </h3>
+                        <h3> {{$ourwork['note']}}</h3>
+                       <h5> {{$ourwork['detail']}}</h5>
+                    
                         <div class="latest-post-meta">
                             <span class="post-item-date">
                                 <i class="fa fa-clock-o"></i> {{$ourwork['date']}}

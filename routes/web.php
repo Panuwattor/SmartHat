@@ -128,6 +128,7 @@ Route::get('/user-review', 'PromotionController@user_receive');
 
 Route::get('/promotions', 'PromotionController@index');
 
+
 Route::get('/ourwork/{ourwork}/show', 'OurworkController@show');
 Route::get('/ourworks', 'OurworkController@index');
 

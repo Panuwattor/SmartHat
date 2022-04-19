@@ -76,6 +76,10 @@
                                 <span> {{$ourwork->note}}</span>
                             </div>
                             <div>
+                                <label for="">เนื้อหา</label>
+                                <span> {{$ourwork->detail}}</span>
+                            </div>
+                            <div>
                                 <label for="">วันที่สร้าง</label>
                                 <span> {{$ourwork->date}}</span>
                             </div>

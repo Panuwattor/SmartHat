@@ -34,12 +34,6 @@ class OutworkController extends Controller
         return view('backend.ourwork.masterfontshow');
         
     }
-
-   
-   
-
-
-
     public function store()
     {
      
@@ -61,7 +55,7 @@ class OutworkController extends Controller
         ]);
 
         foreach (request('files') as $file) {
-            $_file = Storage::disk('spaces')->putFile('tconBuild/ourwork', $file, 'public');
+            $_file = Storage::disk('spaces')->put('tconBuild/ourwork', $file, 'public');
             OurworkFile::create([
                 'ourwork_id' => $ourwork->id,
                 'file' => $_file,
@@ -124,7 +118,7 @@ class OutworkController extends Controller
     {
         DB::beginTransaction();
         foreach (request('files') as $file) {
-            $_file = Storage::disk('spaces')->putFile('tconBuild/ourwork', $file, 'public');
+            $_file = Storage::disk('spaces')->put('tconBuild/ourwork', $file, 'public');
             OurworkFile::create([
                 'ourwork_id' => $ourwork->id,
                 'file' => $_file,

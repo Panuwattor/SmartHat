@@ -38,6 +38,7 @@ class HomeController extends Controller
             $ourworks[$i]['id'] = $our_->id;
             $ourworks[$i]['cont'] = $our_-> cont;
             $ourworks[$i]['note'] = $our_-> note;
+            $ourworks[$i]['detail'] = $our_-> detail;
             $ourworks[$i]['date'] = $our_-> date;
             $ourworks[$i]['file'] =  $our_-> files->where('type', 1)->first() ? $our_->files->where('type', 1)->first()->file : $our_->files->first()->file;
         }
