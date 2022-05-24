@@ -87,7 +87,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/aboutme/updatePassword/{user}', 'UserController@updatePassword');
     Route::get('/builder/admin/users', 'UserController@lists');
     Route::post('/builder/admin/user/{user}', 'UserController@update');
-    Route::get('/user/register', 'UserController@store');
+    Route::post('/user/register', 'UserController@store');
 
     Route::get('/admin/index', 'AdminController@index')->name('home');;
 
@@ -154,5 +154,6 @@ Route::post('/joinuscl/accept/{joinus}', 'joinusController@accept');
 
  Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('/register', 'Auth\RegisterController@register');
+
 Route::post('/login', 'Auth\LoginController@login');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');

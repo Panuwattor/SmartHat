@@ -123,9 +123,12 @@
                     </div>
                 </div>
 
+                
+                @can('add data')
                 <nav class="mt-2">
                     <!-- Setting menu -->
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+                
                         <li class="nav-header text-success"><i class="fas fa-caret-down"></i> จัดการเเว็บไซต์</li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link {{ (request()->is('/admin/ourwork/banner')) ? 'active' : '' }}">
@@ -233,6 +236,9 @@
                                 </p>
                             </a>
                         </li>
+                        @endcan
+
+                        @role('developer')
                         <li class="nav-header text-success"><i class="fas fa-caret-down"></i> SETTING</li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link {{ (request()->is('builder/admin/users')) ? 'active' : '' }} {{ (request()->is('builder/admin/permissions')) ? 'active' : '' }} {{ (request()->is('builder/admin/roles')) ? 'active' : '' }}">
@@ -263,6 +269,7 @@
                                 </li>
                             </ul>
                         </li>
+                        @endrole
                     </ul>
 
                     <!-- End Builder menu -->

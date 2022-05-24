@@ -119,24 +119,7 @@
                       <th>เมื่อ</th>
                     </tr>
                   </thead>
-                  <tbody>
-                  @foreach($points as $on=>$point)
-                  <tr  class="text-center">
-                    <td>{{$on+1}}</td>
-                    <td> <a href="{{$point->link}}" target="back_"> {{$point->type}}</a></td>
-                    <td>{{$point->note}} </td>
-                    <td>{{$point->from_point}} - {{$point->to_point}} </td>
-                    <td>
-                      @if($point->point >= 0)
-                      <span class="badge bg-success">{{$point->point}}</span>
-                      @else
-                      <span class="badge bg-danger">{{$point->point}}</span>
-                      @endif
-                    </td>
-                    <td>{{$point->created_at}} </td>
-                  </tr>
-                  @endforeach
-                  </tbody>
+    
               </table>
                 <!-- /.tab-content -->
                 </div>

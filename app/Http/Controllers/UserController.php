@@ -172,9 +172,9 @@ class UserController extends Controller
          }else{
           $matchget = Null;
          }
-        $points = $user->points()->orderBy('id','desc')->whereBetween('created_at', [Carbon::createFromFormat('Y-m-d H:i:s', $from . ' 00:00:00'), Carbon::createFromFormat('Y-m-d H:i:s', $to . ' 23:59:59')])->get();
+    
 
-        return view('users.show', compact('user','objs','matchget','from','to','points'));
+        return view('users.show', compact('user','objs','matchget','from','to'));
     }
 
     public function auth_update(User $user)
