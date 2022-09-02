@@ -25,52 +25,7 @@
 <section id="main-container" class="main-container">
     <div class="container">
         <!--/ Title row end -->
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="ts-service-box-bg text-center h-100">
-                    <span class="ts-service-icon icon-round">
-                        <i class="fab fa-facebook-f mr-0"></i>
-                    </span>
-                    <a href="https://www.facebook.com/tconbuild">
-                        <div class="ts-service-box-content">
-                            <h4>Facebook</h4>
-                            <p>Tcon Build ทีคอนบิวด์ รับสร้างบ้าน</p>
-                        </div>
-                    </a>
-                </div>
-            </div><!-- Col 1 end -->
-
-            <div class="col-md-4">
-                <div class="ts-service-box-bg text-center h-100">
-                    <span class="ts-service-icon icon-round">
-                        <i class="fab fa-line mr-0"></i>
-                    </span>
-                    <a href="line://ti/p/%40hjy7855d">
-                        <div class="ts-service-box-content">
-                            <h4>Line</h4>
-                            <p>@baantaweechai</p>
-                        </div>
-                    </a>
-                </div>
-            </div><!-- Col 2 end -->
-
-            <div class="col-md-4">
-                <div class="ts-service-box-bg text-center h-100">
-                    <span class="ts-service-icon icon-round">
-                        <i class="fa fa-phone-square mr-0"></i>
-                    </span>
-                    <a href="tel:045-691-999">
-                        <div class="ts-service-box-content">
-                            <h4>Call Us</h4>
-                            <p>045-691-999 ต่อ 4</p>
-                        </div>
-                    </a>
-                </div>
-            </div><!-- Col 3 end -->
-
-        </div><!-- 1st row end -->
-        <div class="gap-60"></div>
+        <div class="row"> </div>
 
         <div class="row text-center">
             <div class="col-12">
@@ -85,16 +40,6 @@
 
         <div class="gap-60"></div>
 
-        <div class="row text-center">
-            <div class="col-12">
-                <h2 class="section-title">Find Our Location </h2>
-                <h3 class="section-sub-title"> สำนักงานศรีสะเกษ</h3>
-            </div>
-        </div>
-
-        <div class="google-map text-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4140.332484998085!2d104.32782073664055!3d15.11040008315328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4d79404b7f6c5d52!2sTaweechai%20Perfect%20Builder%20Offices!5e1!3m2!1sth!2sth!4v1634966195004!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
     </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 

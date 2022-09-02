@@ -124,7 +124,7 @@
                 </div>
 
                 
-                @can('add data')
+               
                 <nav class="mt-2">
                     <!-- Setting menu -->
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
@@ -184,6 +184,15 @@
                                     </a>
                                 </li>
                             </ul>
+
+                            <ul class="nav nav-treeview" style="display: {{ (request()->is('/admin/review/index')) ? 'block' : '' }}">
+                                <li class="nav-item">
+                                    <a href="/admin/review/index" class="nav-link {{ (request()->is('/admin/review/index')) ? 'active' : '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>วีดิโอ</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
 
                         <li class="nav-item has-treeview">
@@ -236,9 +245,9 @@
                                 </p>
                             </a>
                         </li>
-                        @endcan
+                    
 
-                        @role('developer')
+                     
                         <li class="nav-header text-success"><i class="fas fa-caret-down"></i> SETTING</li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link {{ (request()->is('builder/admin/users')) ? 'active' : '' }} {{ (request()->is('builder/admin/permissions')) ? 'active' : '' }} {{ (request()->is('builder/admin/roles')) ? 'active' : '' }}">
@@ -269,7 +278,7 @@
                                 </li>
                             </ul>
                         </li>
-                        @endrole
+                    
                     </ul>
 
                     <!-- End Builder menu -->

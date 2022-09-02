@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Edit font size</h1>
+                <h1 class="m-0 text-dark">รีวิวผลงาน</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/admin/index">Home</a></li>
-                    <li class="breadcrumb-item active">Edit font size</li>
+                    <li class="breadcrumb-item active">รีวิวผลงาน</li>
                 </ol>
             </div>
         </div>
@@ -19,46 +19,51 @@
 
 <section class="content">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card" style="border-radius: 0px;  ">
                 <div class="card-header">
-                    <b><h3 class="card-title">Edit font size</h3></b>
+                    <h3 class="card-title">รีวิวผลงาน</h3>
                     <div class="card-tools">
+                       <a href="/admin/review/create" class="btn   btn-sm btn-outline-info ิ"><i class="fa fa-plus" aria-hidden="true"></i> เพิ่มผลงาน</a>
                     </div>
                 </div>
-                <form action="/admin/Bannerandfont/updatetextup/{{$slidefont->id}}" method="post" enctype="multipart/form-data" onsubmit="return confirm('ยืนยันเพิ่มผลงานของเรา ?')">
-                    @csrf
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="">Type</label>
-                            <select name="type" class="form-control" required>
-                                <option value="">select</option>
-                                <option value="text_small" @if($slidefont->type == "text_small") selected @endif>text_small</option>
-                                <option value="text_normal" @if($slidefont->type == "text_normal") selected @endif>text_normal</option>
-                                <option value="text_large" @if($slidefont->type == "text_large") selected @endif>text_large</option>
-                                <option value="button" @if($slidefont->type == "button") selected @endif>button</option>
-                                <option value="button_outline" @if($slidefont->type == "button_outline") selected @endif>button_outline</option>
-                            </select>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped table-sm">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>NO.</th>
+                                            <th>Name</th>
+                                            <th>Note</th>
+                                            <th>Link</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                            <th>User</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($reviews as $i=> $review)
+                                       <tr class="text-center">
+                                           <td>{{$i+1}}</td>
+                                           <td><a href="/admin/review/{{$review->id}}/detail">{{$review->name}}</a></td>
+                                           <td>{{$review->note}}</td>
+                                           <td>{{$review->link}}</td>
+                                           <td>{!!$review->State!!}</td>
+                                           <td>{{$review->date}}</td>
+                                           <td>{{$review->user->name}}</td>
+                                       </tr>
+                                     @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">note<code>*</code></label>
-                            <input type="text" class="form-control" name="note" required value="{{$slidefont->note}}"><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">link<code>*</code></label>
-                            <input type="text" class="form-control" name="link" value="{{$slidefont->link}}"><br>
-
-                            <button class="btn btn-success pull-right" type="submit">บันทึก</button>
-                        </div>
-                </form>
-
-
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-
 </section>
 @endsection
 @section('header')

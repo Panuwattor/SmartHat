@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin/ourwork/quatation/test','OutworkController@test');
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/admin/review/index', 'ReviewController@index');
+    Route::get('/admin/review/create', 'ReviewController@create');
+    Route::post('/admin/review/store', 'ReviewController@store');
+    Route::get('/admin/review/{review}/detail', 'ReviewController@detail');
+    Route::post('/admin/review/{review}/update', 'ReviewController@update');
+    Route::post('/admin/review/delete/{review}', 'ReviewController@delete');
+    
     Route::get('/admin/ourwork/index', 'OutworkController@index');
     Route::get('/admin/ourwork/create', 'OutworkController@create');
     Route::post('/admin/ourwork/store', 'OutworkController@store');
@@ -29,7 +37,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/Bannerandfont/fontshow','BannershowController@fontshow');
 
     Route::get('/admin/Bannerandfont/edittest','BannershowController@edittest');
-
     Route::get('/admin/Bannerandfont/edittext/{font}','BannershowController@edittext');
     Route::get('/admin/Bannerandfont/updatetext/{slidefont}','BannershowController@edittext');
     Route::post('/admin/Bannerandfont/updatetextup/{font}','BannershowController@edittextup');
@@ -119,6 +126,9 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'web_counter'], function () {
     Route::get('/', 'HomeController@index');
 });
+
+Route::get('/reviews', 'ReviewshowController@index');
+Route::get('/review/{review}/show', 'ReviewshowController@show');
 
 Route::post('/send/user-email', 'UserEmailController@store');
 

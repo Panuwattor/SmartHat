@@ -31,9 +31,9 @@
         {!!$_shareWidget!!}
 
         <div class="post-content post-single">
-          <div class="post-media post-image">
+          <div class="post-media post-image" width="1000" height="600">
             @foreach($ourwork->files->where('type',1) as $file)
-            <img loading="lazy" src="{{ Storage::disk('spaces')->url($file->file)}}" class="img-fluid" alt="post-image">
+            <img loading="lazy" src="{{ Storage::disk('spaces')->url($file->file)}}" class="img-fluid" alt="post-image" >
             @endforeach
           </div>
 
@@ -43,6 +43,8 @@
                 {{$ourwork->note}}
               </h2>
             </div><!-- header end -->
+            <div>  {{$ourwork->detail}}</div>
+          
 
             <div class="entry-content">
               <div class="row">
@@ -50,9 +52,11 @@
                 <div class="col-lg-6 col-md-6 mb-5">
                   <div class="ts-service-box">
                     <div class="ts-service-image-wrapper">
-                      <a href="#exampleModal{{$i}}" data-toggle="modal"> <img loading="lazy" class="w-100" src="{{ Storage::disk('spaces')->url($file['file'])}}" alt="service-image"></a>
+                      <a href="#<div>  {{$ourwork->detail}}</div>exampleModal{{$i}}" data-toggle="modal"> <img loading="lazy" class="w-100" src="{{ Storage::disk('spaces')->url($file['file'])}}" alt="service-image"></a>
                     </div>
                   </div><!-- Service1 end -->
+                
+                
                   <!-- Modal -->
                   <div class="modal fade bd-example-modal-lg" id="exampleModal{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModal{{$i}}Label" aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -63,6 +67,7 @@
                         <div class="modal-body">
                           <img loading="lazy" src="{{ Storage::disk('spaces')->url($file['file'])}}" class="img-fluid" alt="post-image">
                         </div>
+                        
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">X</button>
                         </div>
@@ -73,6 +78,7 @@
                 @endforeach
               </div>
             </div>
+         
 
           </div><!-- post-body end -->
         </div><!-- post content end -->

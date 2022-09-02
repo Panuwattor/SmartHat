@@ -98,7 +98,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <h2 class="section-title">ผลงานของเรา</h2>
-                <h1><span style="color:#b96024">โครงการบ้านล่าสุด</span></h>
+                <h1><span style="color:#F5980E">โครงการบ้านล่าสุด</span></h>
             </div>
         </div>
         <!--/ Title row end -->
@@ -110,7 +110,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="/ourwork/{{ $ourwork['id'] }}/show" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="{{ Storage::disk('spaces')->url($ourwork['file'])}}" alt="img">
+                            <img loading="lazy"  width="1000" height="600" class="img-fluid" src="{{ Storage::disk('spaces')->url($ourwork['file'])}}" alt="img">
                         </a>
                     </div>
 
@@ -236,7 +236,7 @@
             </div><!-- Col end -->
 
             <div class="col-lg-4 text-center">
-                <img loading="lazy" class="img-fluid" src="/images/services/service-center.jpg" alt="service-avater-image">
+                <img loading="lazy" class="img-fluid" src="/images/services/service-center.png" alt="service-avater-image">
             </div><!-- Col end -->
 
             <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
@@ -358,6 +358,35 @@
     <!--/ Container end -->
 </section><!-- Facts end -->
 
+<section id="ts-features" class="project-area solid-bg">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h2 class="section-title">รีวิวผลงาน</h2>
+                <h3 class="section-sub-title">รีวิวผลงาน</h3>
+            </div>
+        </div>
+        <div class="row">
+            @foreach($reviews as $a => $review)
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-post">
+                    <div class="latest-post-media">
+                        <iframe width="auto" height="250px;" src="{{$review->link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="post-body">
+                        <h3 class="service-box-title"><a href="#">{{$review->name}}</a></h3>
+                        <p class="limit-text">{{$review->note}}</p>
+                    </div>
+                </div><!-- Latest post end -->
+            </div><!-- 1st post col end -->
+            @endforeach
+        </div><!-- Content row end -->
+        <div class="general-btn text-center mt-4">
+            <a class="btn btn-primary" href="/reviews">ดู รีวิวผลงาน ทั้งหมด</a>
+        </div>
+    </div><!-- Container end -->
+</section><!-- Feature are end -->
+
 <section class="content">
     <div class="container">
         <div class="row">
@@ -397,7 +426,7 @@
                                 <img loading="lazy" class="testimonial-thumb" src="/images/clients/SmartHat.png" alt="testimonial">
                                 <div class="quote-item-info">
                                     <h2>Smart<span style="color:#b96024"> Hat</span></h2>
-                                    <span class="quote-subtext">ทีคอนบิวด์</span>
+                                    <span class="quote-subtext"></span>
                                 </div>
                             </div>
                         </div>

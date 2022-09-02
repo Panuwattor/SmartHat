@@ -45,8 +45,6 @@ class BannershowController extends Controller
 
     public function edittext(SlideShowfont $slidefont)
     {
-
-
         return view('backend.bannerfont.edittext', compact('slidefont'));
     }
 
