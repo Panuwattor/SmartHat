@@ -87,13 +87,13 @@
           <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
             <ul class="list-unstyled">
               <li>
-                <a title="Facebook" href="https://www.facebook.com/tconbuild" target="back">
+                <a title="Facebook" href="https://www.facebook.com/smarthatroof/" target="back">
                   <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
                 </a>
-                <a title="Twitter" href="line://ti/p/%40hjy7855d">
+                <a title="Twitter" href="https://liff.line.me/1645278921-kWRPP32q/?accountId=smarthat">
                   <span class="social-icon"><i class="fab fa-line"></i></span>
                 </a>
-                <a title="Instagram" href="https://www.instagram.com/tcon.homeservice/">
+                <a title="Instagram" href="#">
                   <span class="social-icon"><i class="fab fa-instagram"></i></span>
                 </a>
                 <a title="Linkdin" href="https://www.youtube.com/channel/UCBkZPW3fK0W7bCzZ3hHsrlg">
@@ -130,7 +130,7 @@
                     <div class="info-box">
                       <div class="info-box-content">
                         <p class="info-box-title">สำนักงานใหญ่</p>
-                        <p class="info-box-subtitle"><a href="tel:045-691-999">045-691-999 ต่อ 4 <br />หรือ 063 905 4914</a></p>
+                        <p class="info-box-subtitle"><a href="tel:045-691-999">045-691-999 ต่อ 4 <br />หรือ 063-905-4914</a></p>
                       </div>
                     </div>
                   </li>
@@ -150,7 +150,7 @@
                     <div class="info-box last">
                       <div class="info-box-content">
                         <p class="info-box-title">Line Official</p>
-                        <p class="info-box-subtitle text-success"><a href="line://ti/p/%40hjy7855d"> @SmartHat </a></p>
+                        <p class="info-box-subtitle text-success"><a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=smarthat"> @SmartHat </a></p>
                       </div>
                     </div>
                   </li>
